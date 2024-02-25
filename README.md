@@ -4,14 +4,14 @@ My own ubuntu setup with kde-plasma desktop and build essentials for building an
 # Setting up Ubuntu Jammy using debootstrap and arch-install-scripts
 ```
 #!/bin/bash
-mkfs.ext4 /dev/[devnode]
-mount /dev/[devnode] /mnt
+#mkfs.ext4 /dev/nvme0n1p4
+#mount /dev/nvme0n1p4 /mnt
 
 debootstrap --variant=minbase \
 --exclude="snapd,cloud-init,landscape-common,popularity-contest,ubuntu-advantage-tools,unattended-upgrades,netplan,networkd" \
 jammy /mnt http://archive.ubuntu.com/ubuntu
 
-echo ubuntu >/mnt/etc/localhost
+echo ubuntu >/mnt/etc/hostname
 echo 127.0.0.1 >>/mnt/etc/hosts
 cat <<EOF >"/mnt/etc/apt/sources.list"
 deb http://archive.ubuntu.com/ubuntu jammy main restricted universe multiverse
