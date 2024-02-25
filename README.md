@@ -45,7 +45,7 @@ EOF
 cat <<EOF >"/mnt/root/setup"
 apt update
 apt dist-upgrade
-apt install --no-install-recommends nano linux-generic-hwe-22.04 linux-firmware initramfs-tools
+apt install --no-install-recommends nano dialog linux-generic-hwe-22.04 linux-firmware initramfs-tools
 apt install nano git adb fastboot python-is-python3 sddm sddm-theme-breeze fonts-noto-color-emoji konsole dolphin ark kde-spectacle kwrite plasma-nm pulseaudio-module-bluetooth gstreamer1.0-plugins-bad tzdata locales keyboard-configuration
 
 export PATH=\$PATH:/usr/sbin
@@ -56,7 +56,7 @@ dpkg-reconfigure keyboard-configuration
 
 systemctl set-default graphical.target
 systemctl enable sddm
-systemctl enable networkmanager
+systemctl enable NetworkManager
 
 
 useradd -mG sudo ilhan
