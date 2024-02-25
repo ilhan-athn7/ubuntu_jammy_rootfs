@@ -31,7 +31,7 @@ deb-src http://archive.canonical.com/ubuntu jammy partner
 EOF
 
 cat <<EOF >"/mnt/etc/apt/preferences.d/ignored-packages"
-Package: snapd cloud-init landscape-common popularity-contest ubuntu-advantage-tools grub* unattended-upgrades apport netplan networkd lilo refind systemd-boot-efi systemd-boot
+Package: snapd cloud-init landscape-common popularity-contest ubuntu-advantage-tools grub* unattended-upgrades apport netplan networkd lilo refind systemd-boot-efi systemd-boot plasma-discover* khelpcenter kinfocenter partitionmanager kdeconnect kwalletmanager plasma-systemmonitor
 Pin: Release * 
 Pin-Priority: -10
 EOF
@@ -59,7 +59,7 @@ systemctl enable sddm
 systemctl enable NetworkManager
 
 
-useradd -mG sudo ilhan
+useradd -mG sudo -s /bin/bash ilhan
 passwd
 passwd ilhan
 EOF
