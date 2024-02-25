@@ -3,6 +3,7 @@ My own ubuntu setup with kde-plasma desktop and build essentials for building an
 
 # Setting up Ubuntu Jammy using debootstrap and arch-install-scripts
 ```
+#!/bin/bash
 mkfs.ext4 /dev/[devnode]
 mount /dev/[devnode] /mnt
 
