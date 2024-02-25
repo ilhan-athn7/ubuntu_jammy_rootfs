@@ -8,7 +8,7 @@ mount /dev/[devnode] /mnt
 
 debootstrap --variant=minbase \
 --exclude="snapd,cloud-init,landscape-common,popularity-contest,ubuntu-advantage-tools,unattended-upgrades,netplan,networkd" \
-jammy /mnt
+jammy /mnt http://archive.ubuntu.com/ubuntu
 
 echo ubuntu >/mnt/etc/localhost
 echo 127.0.0.1 >>/mnt/etc/hosts
@@ -35,6 +35,7 @@ Pin: Release *
 Pin-Priority: -10
 EOF
 
+mkdir -p /mnt/etc/NetworkManager/conf.d/
 cat << EOF > /mnt/etc/NetworkManager/conf.d/10-globally-managed-devices.conf
 [keyfile]
 unmanaged-devices=none
