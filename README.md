@@ -12,7 +12,7 @@ jammy /mnt http://archive.ubuntu.com/ubuntu
 
 echo ubuntu >/mnt/etc/localhost
 echo 127.0.0.1 >>/mnt/etc/hosts
-echo <<EOF >/mnt/etc/apt/sources.list
+echo <<EOF >"/mnt/etc/apt/sources.list"
 deb http://archive.ubuntu.com/ubuntu jammy main restricted universe multiverse
 deb-src http://archive.ubuntu.com/ubuntu jammy main restricted universe multiverse
 
@@ -29,19 +29,19 @@ deb http://archive.canonical.com/ubuntu jammy partner
 deb-src http://archive.canonical.com/ubuntu jammy partner
 EOF
 
-echo << EOF >/mnt/etc/apt/preferences.d/ignored-packages
+echo <<EOF >"/mnt/etc/apt/preferences.d/ignored-packages"
 Package: snapd cloud-init landscape-common popularity-contest ubuntu-advantage-tools grub* unattended-upgrades apport netplan networkd lilo refind systemd-boot-efi systemd-boot
 Pin: Release * 
 Pin-Priority: -10
 EOF
 
 mkdir -p /mnt/etc/NetworkManager/conf.d/
-cat << EOF > /mnt/etc/NetworkManager/conf.d/10-globally-managed-devices.conf
+cat <<EOF >"/mnt/etc/NetworkManager/conf.d/10-globally-managed-devices.conf"
 [keyfile]
 unmanaged-devices=none
 EOF
 
-echo <<EOF >/mnt/root/setup
+echo <<EOF >"/mnt/root/setup"
 apt update
 apt dist-upgrade
 apt install --no-install-recommends \
