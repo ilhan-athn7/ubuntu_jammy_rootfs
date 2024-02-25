@@ -29,7 +29,7 @@ deb http://archive.canonical.com/ubuntu jammy partner
 deb-src http://archive.canonical.com/ubuntu jammy partner
 EOF
 
-echo <<EOF >/mnt/etc/apt/preferences.d/ignored-packages
+echo << EOF >/mnt/etc/apt/preferences.d/ignored-packages
 Package: snapd cloud-init landscape-common popularity-contest ubuntu-advantage-tools grub* unattended-upgrades apport netplan networkd lilo refind systemd-boot-efi systemd-boot
 Pin: Release * 
 Pin-Priority: -10
