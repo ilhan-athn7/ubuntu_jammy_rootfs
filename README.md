@@ -1,5 +1,5 @@
 # ubuntu_jammy_rootfs
-My own ubuntu setup with kde-plasma desktop and build essentials for building android roms.
+My own minimal ubuntu setup with kde-plasma desktop.
 
 # Setting up Ubuntu Jammy using debootstrap and arch-install-scripts
 ```
@@ -67,6 +67,3 @@ EOF
 echo "Now run 'bash /root/setup' to finalize setup."
 arch-chroot /mnt
 ```
-
-# RootFS tarball
-- [mega.nz](https://mega.nz/file/oU0xHTgA#qEfBcKBus-j--gxNLH4u89iYVOdD1l4td-KG7L2KJ94)
