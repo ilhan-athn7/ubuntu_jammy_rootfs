@@ -46,7 +46,7 @@ cat <<EOF >"/mnt/root/setup"
 apt update
 apt dist-upgrade
 apt install --no-install-recommends nano dialog linux-generic-hwe-22.04 linux-firmware initramfs-tools
-apt install nano git adb fastboot python-is-python3 sddm sddm-theme-breeze fonts-noto-color-emoji konsole dolphin ark kde-spectacle kwrite plasma-nm pulseaudio-module-bluetooth gstreamer1.0-plugins-bad tzdata locales keyboard-configuration
+apt install nano htop git adb fastboot python-is-python3 sddm sddm-theme-breeze fonts-noto-color-emoji konsole dolphin ark kde-spectacle kwrite plasma-nm pulseaudio-module-bluetooth gstreamer1.0-plugins-bad tzdata locales keyboard-configuration kbd
 
 export PATH=\$PATH:/usr/sbin
 
